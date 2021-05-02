@@ -2,10 +2,7 @@
 
 echo "Start Guessing Game"
 
-function find {
-	ls -l | egrep '^[d-]r*' | wc -l
-	
-}
+answer=$(ls -l | egrep '^[d-]r*' | wc -l)
 
 echo "How many files are in the current directory?"
 
