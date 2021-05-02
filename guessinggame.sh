@@ -2,19 +2,22 @@
 
 echo "Start Guessing Game"
 
+function check {
+	if [[ $1 -gt $2 ]]
+	then
+		echo "Too high"
+	elif [[ $1 -lt $2 ]]
+	then
+		echo "Too low"
+	fi
+}
+
 answer=$(ls -l | egrep '^[d-]r*' | wc -l)
 echo "How many files are in the current directory?"
 read guess
 while [[ $guess -ne $answer ]]
 do
-	if [[ $guess -gt $answer ]]
-	then
-		echo "Too high"
-	fi
-	if [[ $guess -lt $answer ]]
-	then
-		echo "Too low"
-	fi
+	check $guess $answer
 	echo "Guess again"
 	read guess
 done
