@@ -1,6 +1,3 @@
 # The Guessing Game
-<p>
-Sun May  2 16:45:45 JST 2021
-<br>
+Sun May  2 16:57:37 JST 2021
       26
-</p>
