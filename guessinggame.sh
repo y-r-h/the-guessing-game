@@ -3,11 +3,8 @@
 echo "Start Guessing Game"
 
 answer=$(ls -l | egrep '^[d-]r*' | wc -l)
-
 echo "How many files are in the current directory?"
-
 read guess
-
 while [[ $guess -ne $answer ]]
 do
 	if [[ $guess -gt $answer ]]
@@ -21,7 +18,6 @@ do
 	echo "Guess again"
 	read guess
 done
-
 echo "Correct! There are $guess files in the current directory."
 
 echo "End Guessing Game"
