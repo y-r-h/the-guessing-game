@@ -2,16 +2,20 @@
 
 echo "Start Guessing Game"
 
+answer=10;
+
 echo "How many files are in the current directory?"
 
 read guess
 
 while [[ $guess -ne $answer ]]
 do
-	if [[ $guess > $answer ]]
+	if [[ $guess -gt $answer ]]
 	then
 		echo "Too high"
-	else
+	fi
+	if [[ $guess -lt $answer ]]
+	then
 		echo "Too low"
 	fi
 	echo "Guess again"
